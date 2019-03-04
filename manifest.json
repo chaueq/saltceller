@@ -2,6 +2,12 @@
 	"manifest_version": 2,
 	"name": "Saltcellar",
 	"version": "0.1",
+	
+	"applications": {
+		"gecko": {
+			"id": "saltcellar@chaueq"
+		}
+	},
 
 	"description": "Saltcellar protects those who use same password on multiple sites from man in the middle attack.",
 	
@@ -18,3 +24,4 @@
 		}
 	]
 }
+
