@@ -1,3 +1,3 @@
-# saltceller
-# saltceller
-# saltceller
+# Saltceller
+
+Saltceller is a browser extension which protects you from some of dangers related to password leaks.
