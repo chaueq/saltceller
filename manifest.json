@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "Saltcellar",
+	"version": "0.1",
+
+	"description": "Saltcellar protects those who use same password on multiple sites from man in the middle attack.",
+	
+	"permissions": ["activeTab", "tabs"],
+
+	"icons": {
+		"48": "icons/v1-48.png"
+	},
+	
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["CryptoJS/rollups/sha3.js", "saltcellar.js"]
+		}
+	]
+}
