@@ -17,6 +17,12 @@
 		"48": "icons/v1-48.png"
 	},
 	
+	"browser_action": {
+		"default_icon": "icons/v1-48.png",
+		"default_title": "Saltcellar",
+		"default_popup": "popup/saltcellar_popup.html"
+	},
+	
 	"content_scripts": [
 		{
 			"matches": ["http://*/*", "https://*/*"],
