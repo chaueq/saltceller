@@ -1,0 +1,36 @@
+html,
+body {
+  width: 200px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #053c5e;
+  color: #bfdbf7;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+a,
+a:link,
+a:visited {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #bfdbf7;
+  border-radius: 2px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  transition: box-shadow 0.3s ease-in, color 0.4s ease-in;
+}
+
+a:hover,
+a:focus {
+  box-shadow: inset 0 -3.25em 0 0 #bfdbf7;
+  color: #053c5e;
+}
