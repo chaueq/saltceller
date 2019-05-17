@@ -8,14 +8,22 @@
 
   <body>
     <div id="popup-content">
-      <div class="wrapper">
-        <div class="button">Generate</div>
-        <input class="input" placeholder="Host" />
-        <input class="input" placeholder="Length" />
-        <input class="input" placeholder="Password" />
-        <input type="text" class="input" placeholder="Salt" />
-        <a href="saltcellar_popup.html"><div class="button">Back</div></a>
+      <button class="button">Generate</button>
+
+      <div class="input-box">
+        <input type="text" class="input" placeholder="Host" />
       </div>
+      <div class="input-box">
+        <input type="text" class="input" placeholder="Length" />
+      </div>
+      <div class="input-box">
+        <input type="text" class="input" placeholder="Password" />
+      </div>
+      <div class="input-box">
+        <input type="text" class="input" placeholder="Salt" />
+      </div>
+
+      <a href="saltcellar_popup.html" class="button">Back</a>
     </div>
     <script src="../saltcellar.js"></script>
   </body>
