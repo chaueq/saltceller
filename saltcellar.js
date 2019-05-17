@@ -1,7 +1,7 @@
 function hex2base64(hex) {
-	var hexx = hex.toString();
-	var str = '';
-	for (var i = 0; (i < hexx.length && hexx.substr(i, 2) !== '00'); i += 2)
+	const hexx = hex.toString();
+	let str = '';
+	for (let i = 0; (i < hexx.length && hexx.substr(i, 2) !== '00'); i += 2)
 		str += String.fromCharCode(parseInt(hexx.substr(i, 2), 16));
 	return window.btoa(str);
 }
