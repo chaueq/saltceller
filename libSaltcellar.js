@@ -11,8 +11,12 @@ function hex2base64(hex) {
 	return window.btoa(str);
 }
 
-function harden() {
-	const pageIdentifier = window.location.href.split(window.location.host)[0] + window.location.host;
+function harden(host) {
+	let pageIdentifier;
+	if(host === undefined)
+		pageIdentifier = window.location.href.split(window.location.host)[0] + window.location.host;
+	else
+		pageIdentifier = host;
 	this.value = hex2base64(CryptoJS.SHA3(this.value + pageIdentifier));
 }
 
