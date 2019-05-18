@@ -1,11 +1,14 @@
 class Host{
 	constructor(excluded, chosenFields, salt){
-		if(excluded === undefined)
+		if(excluded === undefined){
 			excluded = false;
-		if(chosenFields === undefined)
+		}
+		if(chosenFields === undefined){
 			chosenFields = [];
-		if(salt === undefined)
+		}
+		if(salt === undefined){
 			salt = '';
+		}
 			
 		this.excluded = excluded;
 		this.chosenFields = chosenFields;
