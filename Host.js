@@ -6,13 +6,9 @@ class Host{
 		if(chosenFields === undefined){
 			chosenFields = [];
 		}
-		if(salt === undefined){
-			salt = '';
-		}
 			
 		this.excluded = excluded;
 		this.chosenFields = chosenFields;
-		this.salt = salt;
 	}
 }
 
