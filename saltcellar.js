@@ -1,7 +1,7 @@
 /*
 	Required:
 	→	CryptoJS/rollups/sha3.js
-	→	libSaltcellar.js
+	→	libCryptoSaltcellar.js
 */
 
 function init(password) {

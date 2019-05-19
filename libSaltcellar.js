@@ -1,22 +1,20 @@
-/*
-	Required:
-	→	CryptoJS/rollups/sha3.js
-*/
-
-function hex2base64(hex) {
-	const hexx = hex.toString();
-	let str = "";
-	for (let i = 0; i < hexx.length && hexx.substr(i, 2) !== "00"; i += 2)
-		str += String.fromCharCode(parseInt(hexx.substr(i, 2), 16));
-	return window.btoa(str);
+function getActiveHostname(tabs) {
+	return tabs[0].url.split("/")[0] + "//" + tabs[0].url.split("/")[2];
 }
 
-function harden(host) {
-	let pageIdentifier;
-	if(host === undefined)
-		pageIdentifier = window.location.href.split(window.location.host)[0] + window.location.host;
-	else
-		pageIdentifier = host;
-	this.value = hex2base64(CryptoJS.SHA3(this.value + pageIdentifier));
+function exclude(hostname) {
+	
+	function onDataLoad(hosts) {
+		if(hosts[hostname] === undefined) {
+			hosts[hostname] = new Host(true, []);
+		}
+		else {
+			hosts[hostname].excluded = true;
+		}
+		browser.storage.sync.set(hosts);
+	}
+
+	const getting = browser.storage.sync.get("hosts");
+	getting.then(onDataLoad);
 }
 
