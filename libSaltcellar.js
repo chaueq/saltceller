@@ -1,3 +1,17 @@
+class Host{
+	constructor(excluded, chosenFields){
+		if(excluded === undefined){
+			excluded = false;
+		}
+		if(chosenFields === undefined){
+			chosenFields = [];
+		}
+			
+		this.excluded = excluded;
+		this.chosenFields = chosenFields;
+	}
+}
+
 function getActiveHostname(tabs) {
 	return tabs[0].url.split("/")[0] + "//" + tabs[0].url.split("/")[2];
 }
