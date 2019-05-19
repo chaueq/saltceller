@@ -1,5 +1,5 @@
 class Host{
-	constructor(excluded, chosenFields, salt){
+	constructor(excluded, chosenFields){
 		if(excluded === undefined){
 			excluded = false;
 		}
