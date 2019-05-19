@@ -3,7 +3,8 @@ function excludeActiveHost() {
 	querying.then(
 		(tabs) => {
 			exclude(getActiveHostname(tabs));
-		}
+		},
+		onError
 	);
 }
 

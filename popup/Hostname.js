@@ -3,5 +3,5 @@ function setHostname(tabs) {
 }
 
 const querying = browser.tabs.query({ currentWindow: true, active: true });
-querying.then(setHostname);
+querying.then(setHostname, onError);
 

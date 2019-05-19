@@ -1,3 +1,7 @@
+function onError() {
+	window.location.href = "/popup/feedback/sthWentWrong.html";
+}
+
 class Host{
 	constructor(excluded, chosenFields){
 		if(excluded === undefined){
@@ -29,6 +33,6 @@ function exclude(hostname) {
 	}
 
 	const getting = browser.storage.sync.get("hosts");
-	getting.then(onDataLoad);
+	getting.then(onDataLoad, onError);
 }
 
