@@ -1,5 +1,5 @@
-function randomEmoji(symbols){
-	if(symbols === undefined)
+function randomString(strings){
+	if(strings === undefined)
 		return "😵";
-	return symbols[Math.round(Math.random() * (symbols.length - 1))]; 
+	return strings[Math.round(Math.random() * (strings.length - 1))]; 
 }
