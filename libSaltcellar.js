@@ -9,7 +9,7 @@ class Host{
 		}
 		if(useWhitelist === undefined){
 			useWhitelist = false;
-		{
+		}
 		if(chosenFields === undefined){
 			chosenFields = [];
 		}
@@ -23,7 +23,7 @@ class Host{
 function getActiveHostname(tabs) {
 	if(tabs === undefined){
 		onError();
-		return;
+		return null;
 	}
 	return tabs[0].url.split("/")[0] + "//" + tabs[0].url.split("/")[2];
 }
