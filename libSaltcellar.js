@@ -3,15 +3,19 @@ function onError() {
 }
 
 class Host{
-	constructor(excluded, chosenFields){
+	constructor(excluded, useWhitelist, chosenFields){
 		if(excluded === undefined){
 			excluded = false;
 		}
+		if(useWhitelist === undefined){
+			useWhitelist = false;
+		{
 		if(chosenFields === undefined){
 			chosenFields = [];
 		}
 			
 		this.excluded = excluded;
+		this.useWhitelist = useWhitelist;
 		this.chosenFields = chosenFields;
 	}
 }
@@ -24,7 +28,7 @@ function exclude(hostname) {
 	
 	function onDataLoad(hosts) {
 		if(hosts[hostname] === undefined) {
-			hosts[hostname] = new Host(true, []);
+			hosts[hostname] = new Host(true, false, []);
 		}
 		else {
 			hosts[hostname].excluded = true;
