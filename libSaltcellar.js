@@ -21,6 +21,10 @@ class Host{
 }
 
 function getActiveHostname(tabs) {
+	if(tabs === undefined){
+		onError();
+		return;
+	}
 	return tabs[0].url.split("/")[0] + "//" + tabs[0].url.split("/")[2];
 }
 
