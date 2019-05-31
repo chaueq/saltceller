@@ -3,6 +3,7 @@ function excludeActiveHost() {
 	querying.then(
 		(tabs) => {
 			exclude(getActiveHostname(tabs));
+			window.location.href = "feedback/ok.html";
 		},
 		onError
 	);
