@@ -1,4 +1,4 @@
-document.getElementById('hugeEmoji').innerHTML = randomEmoji([
+document.getElementById('hugeEmoji').innerHTML = randomString([
 	'😊',
 	'✔️',
 	'😎'
