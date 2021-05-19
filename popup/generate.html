@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="saltcellar_popup.css" />
+  </head>
+
+  <body>
+    <div id="popup-content">
+      <div class="input-box">
+        <input id="Host" type="text" class="input" placeholder="Host" pattern="([a-z])+:\/\/[a-zA-z0-9-]{1,}.[a-zA-Z0-9-]{2,}"/>
+      </div>
+      <div class="input-box">
+        <input id="Length" min="8" max="88" value="88" type="number" class="input" placeholder="Length" />
+      </div>
+      <div class="input-box">
+        <input id="Password" type="password" class="input" placeholder="Password" pattern="[ -~]{8,}"/>
+      </div>
+      <div class="input-box">
+        <input id="Salt" type="text" class="input" placeholder="Salt" />
+      </div>
+      
+      <button id="generateButton" class="button">Generate</button>
+      <a href="saltcellar_popup.html" class="button">Back</a>
+    </div>
+    <script src="../CryptoJS/rollups/sha3.js"></script>
+    <script src="../libCryptoSaltcellar.js"></script>
+    <script src="generate.js"></script>
+  </body>
+</html>

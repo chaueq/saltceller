@@ -11,16 +11,22 @@
 
 	"description": "Saltcellar protects those who use same password on multiple sites from man in the middle attack.",
 	
-	"permissions": ["activeTab", "tabs"],
+	"permissions": ["activeTab", "tabs", "storage"],
 
 	"icons": {
 		"48": "icons/v1-48.png"
 	},
 	
+	"browser_action": {
+		"default_icon": "icons/v1-48.png",
+		"default_title": "Saltcellar",
+		"default_popup": "popup/saltcellar_popup.html"
+	},
+	
 	"content_scripts": [
 		{
 			"matches": ["http://*/*", "https://*/*"],
-			"js": ["CryptoJS/rollups/sha3.js", "saltcellar.js"]
+			"js": ["CryptoJS/rollups/sha3.js", "libCryptoSaltcellar.js", "saltcellar.js"]
 		}
 	]
 }
